@@ -139,12 +139,6 @@ function LtiConsumerXBlock(runtime, element) {
               };
 
             if(askToSendUsername && askToSendEmail) {
-                msg = gettext("Click OK to have your username and e-mail address sent to a 3rd party application.\n\nClick Cancel to return to this page without sending your information.");
-            } else if (askToSendUsername) {
-                msg = gettext("Click OK to have your username sent to a 3rd party application.\n\nClick Cancel to return to this page without sending your information.");
-            } else if (askToSendEmail) {
-                msg = gettext("Click OK to have your e-mail address sent to a 3rd party application.\n\nClick Cancel to return to this page without sending your information.");
-            } else {
                 window.open(destination);
             }
             $.when(confirmDialog(msg)).then(
